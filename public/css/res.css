@@ -1,0 +1,67 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+html, body, address, blockquote, div, dl, form, h1, h2, h3, h4, h5, h6, ol, p, pre, table, ul, dd, dt, li, tbody, td, tfoot, th, thead, tr, button, del, ins, map, object, a, abbr, acronym, b, bdo, big, br, cite, code, dfn, em, i, img, kbd, q, samp, small, span, strong, sub, sup, tt, var, legend, fieldset, p {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+a, input, select, textarea {
+	outline: none;
+	margin: 0;
+	padding: 0;
+}
+img, fieldset {
+	border: 0;
+}
+a {
+	outline: none;
+	border: none;
+}
+img {
+	max-width: 100%;
+	height: auto;
+	width: auto\9;
+	vertical-align: middle;
+	border: none;
+	outline: none;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+div, h1, h2, h3, h4, span, p, input, form, img, hr, img, a {
+	margin: 0;
+	padding: 0;
+	
+}
+.clear {
+	clear: both;
+}
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+.login-form{
+  margin: 12px;
+  text-align:center;
+padding: 12px 12px 12px 12px;
+border: 1px solid #ccc;  
+}
+.form-group{
+    padding:12px 0 12px 0;
+}
+input[type=submit] {
+   padding: 12px;
+    background-color: orange;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.container{
+    margin:12px;
+}
+.btn-primary,.btn-danger{
+        background-color: #5cb85c;
+        border-color: #5cb85c;
+}

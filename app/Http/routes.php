@@ -11,18 +11,19 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
  Route::get('/login',array('uses' =>'AuthController@create'));
  Route::post('/login',array('uses' =>'AuthController@store'));
+ Route::get('/',array('uses' =>'HomeController@home'));
  Route::get('/logout',array('uses'=>'AuthController@logout'));
- Route::get('/blog',array('uses'=>'BlogController@index'));
-  Route::get('/create',array('uses'=>'BlogController@create'));
-  Route::post('/blog',array('uses'=>'BlogController@store'));
-  Route::get('/edit/{id}',array('uses'=>'BlogController@edit'));
+ Route::get('/blog',array('middleware'=>'auth','uses'=>'BlogController@index'));
+  Route::get('/create',array('middleware'=>'auth','uses'=>'BlogController@create'));
+  Route::post('/blog',array('middleware'=>'auth','uses'=>'BlogController@store'));
+  Route::get('/edit/{id}',array('middleware'=>'auth','uses'=>'BlogController@edit'));
  Route::resource('/update', 'BlogController@update');
  Route::get('/comment',array('uses'=>'CommentController@create'));
   Route::post('/storecomment/{id}',array('uses'=>'CommentController@store'));
+   Route::get('/detail/{id}',array('uses'=>'HomeController@detail'));
+
   

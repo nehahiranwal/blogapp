@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Challenge</title>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+</head>
+<body>
+<canvas id="myCanvas" width="800" height="600" style="border:3px solid red">
+ 
+</canvas>
+</body>
+</html>
+
+<script type ="text/javascript">  
+function Shape(x, y, w, h, fill) {
+this.x = x;
+this.y = y;
+this.w = w;
+this.h = h;
+this.fill = fill;
+}
+function CalculateHEX()
+{
+
+var rgbCode ="#";
+for(var c = 0;c< 3;c++)
+{
+  var y = Math.floor((Math.random() * 255) + 1);
+  rgbCode  = rgbCode + Number(y).toString(16);
+}
+return rgbCode;
+
+}
+function init(){
+// get canvas element.	
+var elem = document.getElementById('myCanvas');
+
+// check if context exist
+if (elem.getContext) {
+var myRect = [];
+context = elem.getContext('2d');
+
+ for (var i = 0; i < 50; ++i) {
+for (var j = 0; j < 50; ++j) 
+{
+	var colorcode = CalculateHEX();
+   context.fillStyle = colorcode;
+   context.fillRect(i * 25, j * 20,25,20);
+  //context.fillRect(i * 35, j * 28,35,30);
+}
+}
+}
+}
+init();
+</script>
+
+<!-- ***************************************************  -->
+Here we have total 930 rectangle.
+where each rectangle width is 25.
+And rectangle height is 20.
+
+<!-- *******************************************************-->
